@@ -1,0 +1,204 @@
+/* styles-ghibli.css */
+/* ===== IMPORTAÇÃO DE FONTES ===== */
+@import url("https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Indie+Flower&display=swap");
+
+/* ===== VARIÁVEIS DE TEMA ===== */
+:root {
+  /* --- Tema Claro (padrão) --- */
+  --ghibli-bg: #f2e8dc; /* bege claro */
+  --ghibli-paper: #fffaf0; /* tom de papel antigo */
+  --ghibli-forest: #7c9a6d; /* verde musgo suave */
+  --ghibli-sky: #a3d5ff; /* azul céu pálido */
+  --ghibli-accent: #f6b26b; /* pêssego suave */
+  --ghibli-text: #4a3f35; /* marrom escuro */
+  --ghibli-noise: url("https://www.transparenttextures.com/patterns/papercraft.png");
+}
+
+/* Tema Escuro */
+.app.dark {
+  --ghibli-bg: #2c2e35; /* cinza-azulado escuro */
+  --ghibli-paper: #3c3f45; /* cinza médio */
+  --ghibli-forest: #53675e; /* verde musgo escuro */
+  --ghibli-sky: #526b8a; /* azul noturno suave */
+  --ghibli-accent: #a67c52; /* marrom pêssego escuro */
+  --ghibli-text: #e0d8cf; /* bege claro */
+}
+
+/* ===== RESET ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ===== GERAL ===== */
+body {
+  background-color: var(--ghibli-bg);
+  background-image: var(--ghibli-noise);
+  color: var(--ghibli-text);
+  font-family: "Indie Flower", cursive;
+  line-height: 1.6;
+  min-height: 100vh;
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* ===== HEADER ===== */
+header {
+  padding: 1.5rem 2rem;
+  background-color: var(--ghibli-paper);
+  border-bottom: 2px solid var(--ghibli-forest);
+  font-family: "Amatic SC", cursive;
+  font-size: 1.5rem;
+}
+nav a {
+  color: var(--ghibli-forest);
+  text-decoration: none;
+  margin-right: 1rem;
+  transition: color 0.3s;
+}
+nav a:hover {
+  color: var(--ghibli-sky);
+}
+.theme-toggle {
+  background: var(--ghibli-accent);
+  color: var(--ghibli-paper);
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 12px;
+  font-family: "Amatic SC", cursive;
+  cursor: pointer;
+}
+
+/* ===== MAIN ===== */
+main {
+  flex: 1;
+  margin-top: 80px;
+  padding: 2rem;
+  max-width: 1000px;
+  margin-inline: auto;
+}
+.page {
+  animation: fadeIn 0.6s ease-in-out;
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ===== HERO ===== */
+.hero {
+  background-color: var(--ghibli-paper);
+  padding: 3rem 2rem;
+  border: 2px dashed var(--ghibli-forest);
+  border-radius: 1rem;
+  text-align: center;
+  font-family: "Amatic SC", cursive;
+}
+.hero h1 {
+  font-size: clamp(2.5rem, 6vw, 4rem);
+  color: var(--ghibli-forest);
+  margin-bottom: 0.5rem;
+}
+.hero p {
+  font-size: 1.25rem;
+  margin-bottom: 1.5rem;
+  color: var(--ghibli-text);
+}
+
+/* ===== GRID DE CARDS ===== */
+.posts-grid,
+.projects-grid {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}
+.card {
+  background-color: var(--ghibli-paper);
+  border: 1px solid var(--ghibli-forest);
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
+}
+.card-title {
+  font-family: "Amatic SC", cursive;
+  font-size: 1.75rem;
+  color: var(--ghibli-forest);
+  margin-bottom: 0.75rem;
+}
+
+/* ===== FORMULÁRIO ===== */
+.contact-form {
+  background-color: var(--ghibli-paper);
+  padding: 2rem;
+  border: 1px solid var(--ghibli-forest);
+  border-radius: 12px;
+  max-width: 500px;
+  margin: 0 auto;
+}
+.form-group {
+  margin-bottom: 1rem;
+}
+.form-label {
+  display: block;
+  margin-bottom: 0.25rem;
+  font-weight: bold;
+}
+.form-input,
+.form-textarea {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid var(--ghibli-forest);
+  border-radius: 8px;
+  background: #fff;
+  font-family: inherit;
+  color: var(--ghibli-text);
+}
+
+/* ===== BOTÕES ===== */
+button,
+.custom-button {
+  background-color: var(--ghibli-forest);
+  color: var(--ghibli-paper);
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 12px;
+  font-family: "Amatic SC", cursive;
+  font-size: 1.25rem;
+  cursor: pointer;
+  transition: box-shadow 0.3s;
+}
+button:hover,
+.custom-button:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* ===== FOOTER ===== */
+footer {
+  margin-top: auto;
+  text-align: center;
+  padding: 2rem;
+  background-color: var(--ghibli-paper);
+  border-top: 2px solid var(--ghibli-forest);
+  font-family: "Amatic SC", cursive;
+}
+
+/* ===== RESPONSIVIDADE ===== */
+@media (max-width: 768px) {
+  header {
+    font-size: 1.25rem;
+  }
+  .hero {
+    padding: 2rem 1rem;
+  }
+}
