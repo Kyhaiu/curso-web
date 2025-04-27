@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/curso-web/static/css/main.aff6e844.css",
+    "main.js": "/curso-web/static/js/main.e74354d4.js",
+    "static/js/453.e952c159.chunk.js": "/curso-web/static/js/453.e952c159.chunk.js",
+    "index.html": "/curso-web/index.html",
+    "main.aff6e844.css.map": "/curso-web/static/css/main.aff6e844.css.map",
+    "main.e74354d4.js.map": "/curso-web/static/js/main.e74354d4.js.map",
+    "453.e952c159.chunk.js.map": "/curso-web/static/js/453.e952c159.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.aff6e844.css",
+    "static/js/main.e74354d4.js"
+  ]
+}
