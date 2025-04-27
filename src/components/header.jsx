@@ -1,32 +1,16 @@
 import { Link } from "react-router-dom";
-import {
-  FiMoon,
-  FiSun,
-  FiHome,
-  FiUser,
-  FiBriefcase,
-  FiMail,
-} from "react-icons/fi";
 
 export default function Header({ darkMode, toggleDarkMode }) {
   return (
     <header>
       <nav>
-        <Link to="/">
-          <FiHome /> Home
-        </Link>
-        <Link to="/about">
-          <FiUser /> Sobre
-        </Link>
-        <Link to="/projects">
-          <FiBriefcase /> Projetos
-        </Link>
-        <Link to="/contact">
-          <FiMail /> Contato
-        </Link>
-
+        <Link to="/">Home</Link>
+        <Link to="/about">Sobre</Link>
+        <Link to="/projects">Projetos</Link>
+        <Link to="/contact">Contato</Link>
+        <Link to="/curso-web">Curso Web</Link> {/* NOVO LINK */}
         <button onClick={toggleDarkMode} className="theme-toggle">
-          {darkMode ? <FiSun /> : <FiMoon />}
+          {darkMode ? "🌙 Escuro" : "🌞 Claro"}
         </button>
       </nav>
     </header>

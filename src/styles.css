@@ -183,6 +183,22 @@ button:hover,
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
 
+/* ===== SEÇÃO ===== */
+
+section {
+  margin: 1rem 0;
+}
+section h2 {
+  font-size: 2rem;
+  color: var(--ghibli-forest);
+  margin-bottom: 1rem;
+}
+section p {
+  font-size: 1.125rem;
+  color: var(--ghibli-text);
+  margin-bottom: 1.5rem;
+}
+
 /* ===== FOOTER ===== */
 footer {
   margin-top: auto;
